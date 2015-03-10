@@ -4,13 +4,22 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Traffic Manager Game</title>
-
 		<script type="text/javascript" src="js/phaser.js"></script>
 		<script type="text/javascript" src="js/Boot.js"></script>
 		<script type="text/javascript" src="js/Preload.js"></script>
                 <script type="text/javascript" src="js/MainMenu.js"></script>
 		<script type="text/javascript" src="js/Game.js"></script>
 
+                <script src="//vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+                <script type="text/javascript"> 
+                    VK.init(function() { 
+                       console.log('api is initialized');
+                       console.log(window.location);
+                    }, function() { 
+                       console.log('api is not initialized');
+                    }, '5.28'); 
+                </script>
+                
 		<style>
 		  body {
 		    padding: 0px;
