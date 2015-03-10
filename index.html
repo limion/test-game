@@ -18,7 +18,7 @@
                            qsObj = getQueryParameters();
                            
                        console.log(qsObj);    
-                       console.log(JSON.parse(decodeURIcomponent(qsObj.api_result)));
+                       console.log(JSON.parse(decodeURIComponent(qsObj.api_result)));
                     }, function() { 
                        console.log('api is not initialized');
                     }, '5.28'); 
