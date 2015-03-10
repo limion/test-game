@@ -16,3 +16,7 @@ function getParameterByName(name) {
         results = regex.exec(location.search);
     return results === null ? undefined : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
+getQueryParameters = function(str) {
+    return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+};
