@@ -14,7 +14,11 @@
                 <script type="text/javascript"> 
                     VK.init(function() { 
                        console.log('api is initialized');
-                       console.log(getQueryParameters());
+                       var qs = decodeURI(window.location.search),
+                           qsObj = getQueryParameters(qs);
+                           
+                       console.log(qsObj);    
+                       console.log(getQueryParameters(qsObj.api_result));
                     }, function() { 
                        console.log('api is not initialized');
                     }, '5.28'); 
