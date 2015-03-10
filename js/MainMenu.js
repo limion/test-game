@@ -36,6 +36,8 @@ TopDownGame.MainMenu.prototype =
         var h = this.game.add.text(this.game.width/2, this.game.height/2 + 50, text, style);
         h.anchor.set(0.5);
         
+        this.game.add.image(this.game.width/2, this.game.height/2 + 100,'usepic');
+        
         if (this.game.properties === undefined) {
             /*this.bgSound = this.game.add.audio('soundtrack');
             this.bgSound.play('',0,1,true);

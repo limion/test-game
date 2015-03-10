@@ -26,10 +26,11 @@
                     var TopDownGame = TopDownGame || {};
                     VK.init(function() { 
                         console.log('VK.api is initialized');
-                        var qs = getQueryParameters();
+                        var qs = getQueryParameters(),
+                            result = JSON.parse(decodeURIComponent(qs.api_result));
 
                         TopDownGame.vkData = {
-                            user: JSON.parse(decodeURIComponent(qs.api_result))
+                            user: result.response[0]
                         };    
                         console.log(TopDownGame.vkData);
                        

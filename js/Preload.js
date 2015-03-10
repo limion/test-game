@@ -24,6 +24,9 @@ TopDownGame.Preload.prototype = {
     this.load.audio('crash', 'assets/audio/explosion.ogg');
     this.load.audio('light', 'assets/audio/menu_switch.mp3');
     //this.load.audio('soundtrack', ['assets/audio/bodenstaendig_2000_in_rock_4bit.ogg', 'assets/audio/bodenstaendig_2000_in_rock_4bit.mp3']);
+    
+    //vk
+    this.load.image('userpic', TopDownGame.vkData.user.photo_50);
   },
   create: function() {
     this.state.start('MainMenu');
