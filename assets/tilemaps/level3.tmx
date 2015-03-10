@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" nextobjectid="26">
+ <tileset firstgid="1" name="tmw_desert_spacing" tilewidth="32" tileheight="32" spacing="1" margin="1">
+  <image source="../images/tmw_desert_spacing.png" width="265" height="199"/>
+ </tileset>
+ <tileset firstgid="49" name="car90" tilewidth="32" tileheight="32">
+  <image source="../images/car90.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="50" name="beam" tilewidth="16" tileheight="5">
+  <image source="../images/beam.png" width="16" height="5"/>
+ </tileset>
+ <layer name="bgLayer" width="20" height="20">
+  <data encoding="csv">
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,
+34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,
+34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,
+34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,34,34,34,34,30,30,30,30,30,30,30,30
+</data>
+ </layer>
+ <layer name="blockedLayer" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+26,26,26,26,26,26,26,45,0,0,0,0,44,26,26,26,26,26,26,26,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+42,42,42,42,42,42,42,37,0,0,0,0,36,42,42,42,42,42,42,42,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,33,0,0,0,0,35,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="objectsLayer">
+  <object id="3" name="signal" gid="48" x="192" y="448">
+   <properties>
+    <property name="from" value="west"/>
+    <property name="lzId" value="1"/>
+    <property name="lzgId" value="1"/>
+    <property name="sprite" value="signal"/>
+    <property name="type" value="signal"/>
+   </properties>
+  </object>
+  <object id="5" name="startPoint" gid="49" x="0" y="368">
+   <properties>
+    <property name="from" value="west"/>
+    <property name="sprite" value="car"/>
+    <property name="type" value="carStart"/>
+   </properties>
+  </object>
+  <object id="9" name="zone" x="256" y="320" width="64" height="64">
+   <properties>
+    <property name="geometry" value="yes"/>
+    <property name="lzId" value="1"/>
+    <property name="type" value="zone"/>
+   </properties>
+  </object>
+  <object id="10" name="startPoint" gid="2147483697" x="608" y="305">
+   <properties>
+    <property name="from" value="east"/>
+    <property name="sprite" value="car"/>
+    <property name="type" value="carStart"/>
+   </properties>
+  </object>
+  <object id="11" name="signal" gid="48" x="416" y="224">
+   <properties>
+    <property name="from" value="east"/>
+    <property name="lzId" value="2"/>
+    <property name="lzgId" value="1"/>
+    <property name="sprite" value="signal"/>
+    <property name="type" value="signal"/>
+   </properties>
+  </object>
+  <object id="19" name="signal" gid="48" x="192" y="224">
+   <properties>
+    <property name="from" value="north"/>
+    <property name="lzId" value="3"/>
+    <property name="lzgId" value="1"/>
+    <property name="sprite" value="signal"/>
+    <property name="type" value="signal"/>
+   </properties>
+  </object>
+  <object id="20" name="signal" gid="48" x="416" y="448">
+   <properties>
+    <property name="from" value="south"/>
+    <property name="lzId" value="4"/>
+    <property name="lzgId" value="1"/>
+    <property name="sprite" value="signal"/>
+    <property name="type" value="signal"/>
+   </properties>
+  </object>
+  <object id="21" name="zone" x="320" y="320" width="64" height="64">
+   <properties>
+    <property name="geometry" value="yes"/>
+    <property name="lzId" value="4"/>
+    <property name="type" value="zone"/>
+   </properties>
+  </object>
+  <object id="22" name="zone" x="256" y="256" width="64" height="64">
+   <properties>
+    <property name="geometry" value="yes"/>
+    <property name="lzId" value="3"/>
+    <property name="type" value="zone"/>
+   </properties>
+  </object>
+  <object id="23" name="zone" x="320" y="256" width="64" height="64">
+   <properties>
+    <property name="geometry" value="yes"/>
+    <property name="lzId" value="2"/>
+    <property name="type" value="zone"/>
+   </properties>
+  </object>
+  <object id="24" name="startPoint" gid="49" x="272" y="32">
+   <properties>
+    <property name="from" value="north"/>
+    <property name="sprite" value="car"/>
+    <property name="type" value="carStart"/>
+   </properties>
+  </object>
+  <object id="25" name="startPoint" gid="49" x="336" y="640">
+   <properties>
+    <property name="from" value="south"/>
+    <property name="sprite" value="car"/>
+    <property name="type" value="carStart"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
