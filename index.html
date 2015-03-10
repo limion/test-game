@@ -11,29 +11,49 @@
 		<script type="text/javascript" src="js/Game.js"></script>
 
                 <script src="//vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
-                <script type="text/javascript"> 
-                    VK.init(function() { 
-                       console.log('api is initialized');
-                       var qs = (window.location.search),
-                           qsObj = getQueryParameters();
-                           
-                       console.log(qsObj);    
-                       console.log(JSON.parse(decodeURIComponent(qsObj.api_result)));
-                    }, function() { 
-                       console.log('api is not initialized');
-                    }, '5.28'); 
-                </script>
                 
 		<style>
 		  body {
 		    padding: 0px;
 		    margin: 0px;
 		  }
-		  </style>
+		</style>
 	</head>
 
 	<body>  
 		<!-- include the main game file -->
-		<script src="js/main.js"></script>
+                <script type="text/javascript">
+                    var TopDownGame = TopDownGame || {};
+                    VK.init(function() { 
+                        console.log('VK.api is initialized');
+                        var qs = getQueryParameters();
+
+                        TopDownGame.vkData = {
+                            user: JSON.parse(decodeURIComponent(qs.api_result))
+                        };    
+                        console.log(TopDownGame.vkData);
+                       
+                        TopDownGame.game = new Phaser.Game(640, 640, Phaser.AUTO, '');
+                        TopDownGame.game.state.add('Boot', TopDownGame.Boot);
+                        TopDownGame.game.state.add('Preload', TopDownGame.Preload);
+                        TopDownGame.game.state.add('MainMenu', TopDownGame.MainMenu);
+                        TopDownGame.game.state.add('Game', TopDownGame.Game);
+                        TopDownGame.game.state.start('Boot');
+                    }, function() { 
+                        console.log('VK.api is not initialized');
+                    }, '5.28'); 
+
+                    // get url parameter
+                    function getParameterByName(name) {
+                        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                            results = regex.exec(location.search);
+                        return results === null ? undefined : decodeURIComponent(results[1].replace(/\+/g, " "));
+                    }
+
+                    getQueryParameters = function(str) {
+                        return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+                    };
+                </script>
 	</body>
 </html>
