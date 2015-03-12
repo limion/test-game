@@ -27,9 +27,6 @@ TopDownGame.Preload.prototype = {
     
     //vk
     this.load.crossOrigin = 'anonymous';
-    var userpic = new Image();
-    userpic.src = TopDownGame.vkData.user.photo_50;
-    this.cache.addImage('_userpic', userpic.src, userpic);
     this.load.image('userpic', TopDownGame.vkData.user.photo_50);
   },
   create: function() {

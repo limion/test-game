@@ -37,7 +37,7 @@ TopDownGame.MainMenu.prototype =
         h.anchor.set(0.5);
         
         var vkUser = this.game.add.text(this.game.width/2, this.game.height/2 + 75, TopDownGame.vkData.user.first_name+' '+TopDownGame.vkData.user.last_name, style).anchor.set(0.5);;
-        this.game.add.image(this.game.width/2, this.game.height/2 + 100,'userpic').anchor.set(0.5);
+        this.game.add.image(this.game.width/2, this.game.height/2 + 150,'userpic').anchor.set(0.5);
         
         if (this.game.properties === undefined) {
             /*this.bgSound = this.game.add.audio('soundtrack');
