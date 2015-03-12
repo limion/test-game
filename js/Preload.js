@@ -26,10 +26,11 @@ TopDownGame.Preload.prototype = {
     //this.load.audio('soundtrack', ['assets/audio/bodenstaendig_2000_in_rock_4bit.ogg', 'assets/audio/bodenstaendig_2000_in_rock_4bit.mp3']);
     
     //vk
+    this.load.crossOrigin = 'anonymous';
     var userpic = new Image();
     userpic.src = TopDownGame.vkData.user.photo_50;
-    this.cache.addImage('userpic', userpic.src, userpic);
-    //this.load.image('userpic', TopDownGame.vkData.user.photo_50);
+    this.cache.addImage('_userpic', userpic.src, userpic);
+    this.load.image('userpic', TopDownGame.vkData.user.photo_50);
   },
   create: function() {
     this.state.start('MainMenu');
